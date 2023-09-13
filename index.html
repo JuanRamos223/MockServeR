@@ -23,16 +23,13 @@
 		</section>
 	</div>
 	<script>
-		// CONSTANTES 
+		
 		const baseApi = "https://asperosGeek/v1/api";
 		const basicAuthApi = "Basic dXNlcllvdXR1YmU6cGFzd29yZFlvdXR1YmU=";
 		const textToken = document.querySelector("#text_token");
 
 		const $buttonProducts = document.querySelector("#btnGetProducts");
 
-		/**
-			Método para obtener datos con fetch de Javascript.
-		*/
 		const fetchData = async (url, method, data, auth=null) => {
 			let jsonFetch = {
 		    	method: method,
@@ -51,9 +48,7 @@
 		    return await response.json()
 		}
 
-		/**
-			Método para solicititar productos.
-		*/
+		
 		$buttonProducts.addEventListener("click", async ()=> {
 			textToken.innerHTML= "";
 			try{
@@ -81,9 +76,7 @@
 			}
 		});
 
-		/**
-			Método para gráficar productos.
-		*/
+	
 		async function  graphProducts(products){
 			const $products = document.querySelector("#text_products");
 			$products.innerHTML = "";
