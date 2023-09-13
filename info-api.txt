@@ -39,10 +39,10 @@ RESPONSE:
 		"prev": null
 	},
 	"results": [
-		{"id": 1, "name": "lavadora", "precio": 1700000},
-		{"id": 2, "name": "nevera", "precio": 2500000},
-		{"id": 3, "name": "estufa", "precio": 1400000},
-		{"id": 4, "name": "televisor", "precio": 1200000},
-		{"id": 5, "name": "computador", "precio": 3500000}
+		{"id": 1, "name": "Celular", "precio": 1700000},
+		{"id": 2, "name": "Heladera", "precio": 2500000},
+		{"id": 3, "name": "Aerosol", "precio": 1400000},
+		{"id": 4, "name": "Televison", "precio": 1200000},
+		{"id": 5, "name": "Escritorio", "precio": 3500000}
 	]
 }
