@@ -9,27 +9,30 @@
 <body>
 	<div class="container">
 		<section class="section py-3">
-			<h1>Petición POST</h1> <br>
+			<h1>Ejemplo de petición POST</h1> <br>
 			<button class="button is-danger" id="btnGetProducts">Obtener productos</button>
 			<hr>
 			<div class="card py-5 px-5" style="height: 110px">
-				<h2>El Token es: </h2> <br>
+				<h2>Tu token es: </h2> <br>
 				<div id="text_token"></div>
 			</div>
 			<div class="card py-5 px-5" style="height: 250px">
-				<h2>Tus Productos son: </h2> <br>
+				<h2>Tus productos son: </h2> <br>
 				<div id="text_products"></div>
 			</div>
 		</section>
 	</div>
 	<script>
-		
-		const baseApi = "https://asperosGeek/v1/api";
+		// CONSTANTES 
+		const baseApi = "https://3ee95848-e5fb-463f-80c2-25c120cb78a9.mock.pstmn.io";
 		const basicAuthApi = "Basic dXNlcllvdXR1YmU6cGFzd29yZFlvdXR1YmU=";
 		const textToken = document.querySelector("#text_token");
 
 		const $buttonProducts = document.querySelector("#btnGetProducts");
 
+		/**
+			Método para obtener datos con fetch de Javascript.
+		*/
 		const fetchData = async (url, method, data, auth=null) => {
 			let jsonFetch = {
 		    	method: method,
@@ -48,7 +51,9 @@
 		    return await response.json()
 		}
 
-		
+		/**
+			Método para solicititar productos.
+		*/
 		$buttonProducts.addEventListener("click", async ()=> {
 			textToken.innerHTML= "";
 			try{
@@ -76,7 +81,9 @@
 			}
 		});
 
-	
+		/**
+			Método para gráficar productos.
+		*/
 		async function  graphProducts(products){
 			const $products = document.querySelector("#text_products");
 			$products.innerHTML = "";
